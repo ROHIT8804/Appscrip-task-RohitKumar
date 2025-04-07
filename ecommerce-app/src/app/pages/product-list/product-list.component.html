@@ -1,0 +1,9 @@
+<!-- product-list.component.html -->
+<section>
+  <h1>Discover Our Products</h1>
+  <p>Lorem ipsum dolor sit amet consectetur...</p>
+
+  <div class="product-grid">
+    <app-product-card *ngFor="let product of products" [product]="product" />
+  </div>
+</section>

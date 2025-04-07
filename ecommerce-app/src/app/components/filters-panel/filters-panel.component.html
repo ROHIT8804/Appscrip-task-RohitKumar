@@ -1,0 +1,36 @@
+<div class="filter-wrapper">
+  <h4>Customizable</h4>
+  <label>
+    <input type="checkbox" [(ngModel)]="filters.customizable" (change)="onFilterChange()" />
+    Customizable
+  </label>
+
+  <h4>Ideal For</h4>
+  <div *ngFor="let option of idealForOptions">
+    <label>
+      <input type="radio" name="idealFor" [value]="option" [(ngModel)]="filters.idealFor" (change)="onFilterChange()" />
+      {{ option }}
+    </label>
+  </div>
+
+  <h4>Occasion</h4>
+  <input type="text" [(ngModel)]="filters.occasion" (input)="onFilterChange()" />
+
+  <h4>Work</h4>
+  <input type="text" [(ngModel)]="filters.work" (input)="onFilterChange()" />
+
+  <h4>Fabric</h4>
+  <input type="text" [(ngModel)]="filters.fabric" (input)="onFilterChange()" />
+
+  <h4>Segment</h4>
+  <input type="text" [(ngModel)]="filters.segment" (input)="onFilterChange()" />
+
+  <h4>Suitable For</h4>
+  <input type="text" [(ngModel)]="filters.suitableFor" (input)="onFilterChange()" />
+
+  <h4>Raw Materials</h4>
+  <input type="text" [(ngModel)]="filters.rawMaterials" (input)="onFilterChange()" />
+
+  <h4>Pattern</h4>
+  <input type="text" [(ngModel)]="filters.pattern" (input)="onFilterChange()" />
+</div>
